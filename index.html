@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://fonts.xz.style/serve/inter.css">
+    <link rel="stylesheet" href="./src/styles/new.min.css">
+    <link rel="stylesheet" href="./src/styles/night.css">
+    <link rel="stylesheet" href="./src/styles/index.css">
+    <title>Planet Generator</title>
+</head>
+
+<body style="max-width: 900px; margin-left: auto; margin-right: auto;">
+    <div style="margin: 20px; padding:20px;">
+        <h1 style="margin-bottom: 10px!important;">Planet Generator</h1>
+        <p>A random planet generator! Adjust the inputs, check the preview, and share a cool GIF!</p>
+
+        <div id="container">
+            <div style="flex: 1;">
+                <label for=seed>Seed</label>
+                <div style="flex-direction: row; align-items: center;margin-bottom: 10px!important">
+                    <input type=range style="width: 200px;" min=1 max=100 name='seed' value=69 />
+                    <span style="margin-left: 10px;" id=seed-value>69</span>
+                </div>
+
+                <label for=intensity>Intensity</label>
+                <div style="flex-direction: row; align-items: center;margin-bottom: 10px!important">
+                    <input type=range style="width: 200px;" min=1 max=10 name='intensity' value=1 />
+                    <span style="margin-left: 10px;" id=intensity-value>1</span>
+                </div>
+
+                <label>Colors</label>
+                <div style="flex-direction: row">
+                    <input class='parameter-input' type=color name='color1' value='#5b6ee1'
+                        style="height: 40px;margin: 2px;" />
+                    <input class='parameter-input' type=color name='color2' value='#d9ccad'
+                        style="height: 40px;margin: 2px;" />
+                    <input class='parameter-input' type=color name='color3' value='#6bbe30'
+                        style="height: 40px;margin: 2px;" />
+                    <input class='parameter-input' type=color name='color4' value='#dddddd'
+                        style="height: 40px;margin: 2px;" />
+                </div>
+
+                <br />
+                <div style="flex-direction: row; align-items: center;">
+                    <input style="transform: scale(2); margin-right: 10px;" type=checkbox id=adjustcolors
+                        name='adjustcolors' />
+                    <label for=adjustcolors>Color effect</label>
+                    <span
+                        style="text-align:     center; margin-left: 10px; font-size: 8px; padding: 2px 6px; background-color: var(--nc-bg-2); border-radius: 2px;">NEW!</span>
+                </div>
+                <br />
+                <div style="flex-direction: row; align-items: center;">
+                    <input checked style="transform: scale(2); margin-right: 10px;" type=checkbox id=createhills
+                        name='createhills' />
+                    <label for=createhills>Terrain diff</label>
+                    <span
+                        style="text-align: center; margin-left: 10px; font-size: 8px; padding: 2px 6px; background-color: var(--nc-bg-2); border-radius: 2px;">NEW!</span>
+                </div>
+
+                <br />
+                <br />
+                <div style="flex-direction: row; align-items: center;">
+                    <input checked style="transform: scale(2); margin-right: 10px;" type=checkbox id=clouds
+                        name='clouds' />
+                    <label for=clouds>Clouds</label>
+                    <span
+                        style="text-align: center; margin-left: 10px; font-size: 8px; padding: 2px 6px; background-color: var(--nc-bg-2); border-radius: 2px;">NEW!</span>
+                </div>
+                <br />
+                <label for=cloudstreshold>Clouds frequency<span
+                        style="text-align: center; margin-left: 10px; font-size: 8px; padding: 2px 6px; background-color: var(--nc-bg-2); border-radius: 2px;">NEW!</span></label>
+                <div style="flex-direction: row; align-items: center;margin-bottom: 10px!important">
+                    <input type=range style="width: 200px;" min=0 max=1 name='cloudstreshold' value=0.35 step=0.01 />
+                    <span style="margin-left: 10px;" id=cloudstreshold-value>0.35</span>
+                </div>
+
+                <label for=cloudcolor>Clouds color<span
+                        style="text-align: center; margin-left: 10px; font-size: 8px; padding: 2px 6px; background-color: var(--nc-bg-2); border-radius: 2px;">NEW!</span></label>
+                <input class='parameter-input' type=color name='cloudcolor' value='#ffffff'
+                    style="height: 40px;margin: 2px;" />
+            </div>
+            <div style="flex: 1; align-items: center">
+                <canvas width=256 height=256 style="width: 256px; height: 256px;" id='preview-canvas'></canvas>
+            </div>
+        </div>
+        <button id='submit-btn' style="margin-bottom: 10px!important;">Share</button>
+        <p>Made with &#10084; by <a href='https://renanliberato.com.br' target='_blank'>Renan Liberato</a></p>
+        <p>Check out what I'm currently working on: <a
+                href="https://play.google.com/store/apps/details?id=br.com.renanliberato.spaceshooter">Space Arena</a>
+        </p>
+        <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+        <ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-9957018559956996"
+            data-ad-slot="3157768342" data-ad-format="auto" data-full-width-responsive="true"></ins>
+        <script>
+            (adsbygoogle = window.adsbygoogle || []).push({});
+        </script>
+    </div>
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-5CN01CLG8B"></script>
+    <script>
+        if (!document.location.href.includes("localhost")) {
+            window.dataLayer = window.dataLayer || [];
+
+            function gtag() {
+                dataLayer.push(arguments);
+            }
+            gtag('js', new Date());
+
+            gtag('config', 'G-5CN01CLG8B');
+        }
+    </script>
+    <script src="./src/index.js"></script>
+</body>
+
+</html>

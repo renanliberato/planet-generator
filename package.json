@@ -1,0 +1,19 @@
+{
+  "name": "planet-generator",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "parcel build ./index.html --no-source-maps --public-url /planetgenerator"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "canvas": "^2.6.1",
+    "file-saver": "^2.0.5"
+  },
+  "devDependencies": {
+    "cssnano": "^4.1.10"
+  }
+}
